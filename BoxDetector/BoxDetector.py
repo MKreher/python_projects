@@ -4,9 +4,38 @@ import argparse
 import imutils
 import cv2
 
+def drawBoundingBox(image, contour, color, thickness):
+    rect = cv2.minAreaRect(contour)
+    box = cv2.boxPoints(rect)
+    box = np.int0(box)
+    cv2.drawContours(image, [box], 0, color, thickness)
+
+    width = int(round(rect[1][1]))
+    length = int(round(rect[1][0]))
+
+    return width, length
+
+def calcContourCenter(contour):
+    M = cv2.moments(contour)
+    cX = int((M["m10"] / M["m00"]))
+    cY = int((M["m01"] / M["m00"]))
+    return cX, cY
+
+def calcDimension(width_box_px, length_box_px, width_area_px, length_area_px):
+
+    horizRatio = width_area_px / area_width_mm
+    vertiRatio = length_area_px / area_length_mm
+
+    width_box_cm = round(width_box_px * horizRatio / 100, 2)
+    length_box_cm = round(length_box_px * horizRatio / 100, 2)
+
+    return width_box_cm, length_box_cm
 
 def nothing(x):
     pass
+
+area_width_mm = 210
+area_length_mm = 148
 
 cap = cv2.VideoCapture(1)
 
@@ -88,30 +117,40 @@ while (1):
     # detect box parking are - the biggest contour is sure the box parking area
     boxAreaContour = contours.pop(0)
     del contours[0]
+
+    # draw rotated bounding box around parking area and get the dimension in pixel
+    width_area_px, length_area_px = drawBoundingBox(frame, boxAreaContour, (255,0,0), 3)
+
     # detect box contours
     boxContours = []
     for c in contours:
         # filter out unreasonable too small contours
         areaSize = cv2.contourArea(c, oriented=True)
-        if areaSize > 100:
+        if areaSize > 500:
             boxContours.append(c)
+            # draw bounding rect and get dimension of the box in pixel
+            width_box_px, length_box_px = drawBoundingBox(frame, c, (0, 255, 0), 2)
+
+            # compute the dimension in cm
+            width_box_cm, length_box_cm = calcDimension(width_box_px, length_box_px, width_area_px, length_area_px)
+
             # compute the center of the contour
-            M = cv2.moments(c)
-            cX = int((M["m10"] / M["m00"]))
-            cY = int((M["m01"] / M["m00"]))
-            cv2.putText(frame, "A:{}".format(areaSize), (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
+            cX, cY = calcContourCenter(c)
+            #cv2.putText(frame, "A:{}".format(areaSize), (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0), 1)
+            cv2.putText(frame, "{0}x{1}".format(width_box_cm, length_box_cm), (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 255), 1)
 
-
+    # count number of boxes
     numberPackages = len(boxContours)
-    cv2.putText(frame, "# Packages: {}".format(numberPackages), (10, 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+    cv2.putText(frame, "# Packages: {}".format(numberPackages), (10, 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
 
-    cv2.drawContours(frame, [boxAreaContour], -1, (255, 0, 0), 2)
-    cv2.drawContours(frame, boxContours, -1, (0, 255, 0), 1)
+    # draw determined contours
+    #cv2.drawContours(frame, [boxAreaContour], -1, (255, 0, 0), 1)
+    #cv2.drawContours(frame, boxContours, -1, (0, 255, 0), 1)
 
     cv2.imshow("orig", frame)
-    #cv2.imshow("bitwise_and", bitwise_and)
-    #cv2.imshow("thresh", thresh)
-    #cv2.imshow("erode", erode)
+    cv2.imshow("bitwise_and", bitwise_and)
+    cv2.imshow("thresh", thresh)
+    cv2.imshow("erode", erode)
     cv2.imshow("edged", edged)
 
     k = cv2.waitKey(5) & 0xFF
