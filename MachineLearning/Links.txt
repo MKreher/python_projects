@@ -3,3 +3,6 @@ http://cv-tricks.com/tensorflow-tutorial/keras/
 https://stackoverflow.com/questions/48934338/non-linear-regression-why-isnt-the-model-learning
 https://github.com/ChristosChristofidis/awesome-deep-learning
 https://stackoverflow.com/questions/48775305/what-function-defines-accuracy-in-keras-when-the-loss-is-mean-squared-error-mse
+https://datascience.stackexchange.com/questions/19365/predict-sinus-with-keras-feed-forward-neural-network
+https://stackoverflow.com/questions/24645153/pandas-dataframe-columns-scaling-with-sklearn/36475297
+http://benalexkeen.com/feature-scaling-with-scikit-learn/
