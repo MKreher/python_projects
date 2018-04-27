@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d3b6b8-edd5-46d7-97da-1459dbf6b2fc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OpenCVTests/auto_canny.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxDetector/.idea/BoxDetector.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxDetector/.idea/BoxDetector.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxDetector/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxDetector/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxDetector/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxDetector/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxDetector/BoxDetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/../BoxDetector/BoxDetector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BoxDetector/transform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCVTests/.idea/OpenCVTests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCVTests/.idea/OpenCVTests.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCVTests/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCVTests/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCVTests/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCVTests/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCVTests/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OpenCVTests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OpenCVTests/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bedarfsvorhersage/LinearRegression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Links.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../_windows/laf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code.style.schemes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codestyles/Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debugger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../find.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ide.general.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Bedarfsvorhersage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bedarfsvorhersage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="40">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -41,11 +34,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LinearRegression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/LinearRegression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Links.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Links.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Bedarfsvorhersage.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="1190">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -65,13 +76,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage_linear.py" />
+        <option value="$PROJECT_DIR$/Bedarfsvorhersage/LinearRegression.py" />
+        <option value="$PROJECT_DIR$/Links.txt" />
         <option value="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="537" />
-    <option name="y" value="87" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="107" />
+    <option name="y" value="22" />
     <option name="width" value="1292" />
     <option name="height" value="826" />
   </component>
@@ -81,6 +95,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,12 +118,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\python_projects\MachineLearning\Bedarfsvorhersage" />
+      <recent name="C:\Work\python_projects\MachineLearning\Bedarfsvorhersage\data" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -122,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Bedarfsvorhersage">
+  <component name="RunManager" selected="Python.LinearRegression">
     <configuration name="Bedarfsvorhersage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MachineLearning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,6 +156,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="LinearRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MachineLearning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bedarfsvorhersage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bedarfsvorhersage/LinearRegression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,9 +200,11 @@
     <list>
       <item itemvalue="Python.Main" />
       <item itemvalue="Python.Bedarfsvorhersage" />
+      <item itemvalue="Python.LinearRegression" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.LinearRegression" />
         <item itemvalue="Python.Bedarfsvorhersage" />
         <item itemvalue="Python.Main" />
       </list>
@@ -184,15 +224,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="537" y="87" width="1292" height="826" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37617555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43514645" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -210,13 +250,78 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -234,26 +339,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage_linear.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/LinearRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/data/Bedarfsvorhersage.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="1190">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Bedarfsvorhersage/Bedarfsvorhersage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="40">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Links.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

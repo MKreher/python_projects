@@ -1,0 +1,5 @@
+#https://github.com/kmclaugh/fastai_courses/blob/master/ai-playground/Keras_Linear_Regression_Example.ipynb
+#http://cv-tricks.com/tensorflow-tutorial/keras/
+https://stackoverflow.com/questions/48934338/non-linear-regression-why-isnt-the-model-learning
+#https://github.com/ChristosChristofidis/awesome-deep-learning
+
