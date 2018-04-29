@@ -6,3 +6,15 @@ https://stackoverflow.com/questions/48775305/what-function-defines-accuracy-in-k
 https://datascience.stackexchange.com/questions/19365/predict-sinus-with-keras-feed-forward-neural-network
 https://stackoverflow.com/questions/24645153/pandas-dataframe-columns-scaling-with-sklearn/36475297
 http://benalexkeen.com/feature-scaling-with-scikit-learn/
+
+https://www.youtube.com/watch?v=J-pdGjWY9as
+http://dacatay.com/data-science/part-1-time-series-basics-python/
+https://www.grund-wissen.de/informatik/python/scipy/matplotlib.html
+
+
+https://www.linkedin.com/pulse/deep-time-to-failure-predictive-maintenance-using-rnns-spacagna
+https://machinelearningmastery.com/understanding-stateful-lstm-recurrent-neural-networks-python-keras/
+https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/
+https://github.com/umbertogriffo/Predictive-Maintenance-using-LSTM
+https://github.com/gm-spacagna/deep-ttf/
+https://github.com/ragulpr/wtte-rnn

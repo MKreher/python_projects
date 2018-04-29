@@ -1,3 +1,4 @@
+# Imports
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -13,21 +14,35 @@ print("TensorFlow version: {}".format(tf.VERSION))
 datafilePath = "./data/Bedarfsvorhersage.csv"
 
 # Ist-Bestandsverlauf plotten
-# tag, bestand = np.loadtxt(datafilePath, delimiter=',', skiprows=1, unpack=True)
-dataframeX = pd.read_csv(datafilePath, delimiter=',', skiprows=1, usecols=[0])
-dataframeY = pd.read_csv(datafilePath, delimiter=',', skiprows=1, usecols=[1])
+X, Y = np.loadtxt(datafilePath, delimiter=',', skiprows=1, unpack=True)
+#dataframeX = pd.read_csv(datafilePath, delimiter=',', skiprows=1, usecols=[0])
+#dataframeY = pd.read_csv(datafilePath, delimiter=',', skiprows=1, usecols=[1])
 
 # pandas DataFrame to numpy Array and reshape nD-Array to a 1D-Array for matplot
-#x = dataframeX.values.reshape([dataframeX.size])
-#y = dataframeY.values.reshape([dataframeY.size])
+#X = dataframeX.values.reshape([dataframeX.size])
+#Y = dataframeY.values.reshape([dataframeY.size])
+
+plt.subplot(2,1,1)
+#fig, ax = plt.subplots(figsize=(15, 5))
+plt.plot(X, Y, 'ro')
+plt.plot(X, Y)
+plt.xlabel('Tag')
+plt.ylabel('Bestand')
+plt.title('Ist-Bestand (unscaled)')
+#plt.show()
 
 scaler = preprocessing.MinMaxScaler()
-X = scaler.fit_transform(dataframeX)
-Y = scaler.fit_transform(dataframeY)
+#X = scaler.fit_transform(dataframeX)
+Y = scaler.fit_transform(Y.reshape(-1,1))
 
-
-#x = np.arange(200).reshape(-1,1) / 50
-#y = np.sin(x)
+plt.subplot(2,1,2)
+#fig, ax = plt.subplots(figsize=(15, 5))
+plt.plot(X, Y, '')
+plt.plot(X, Y, 'ro')
+plt.xlabel('Tag')
+plt.ylabel('Bestand')
+plt.title('Ist-Bestand (scaled)')
+plt.show()
 
 #Needed to use the TensorBoard tool to visualize the model training.
 tbCallBack = tf.keras.callbacks.TensorBoard(log_dir='./tmp/model_graph', write_graph=True)
@@ -40,33 +55,20 @@ model.add(Dense(1, activation='linear'))
 sgd = SGD(0.001);
 model.compile(loss='mean_squared_error', optimizer=sgd, metrics=['mean_squared_error'])
 
-H = model.fit(X, Y, epochs=10000, batch_size=50, verbose=2, validation_split=0.3, callbacks=[tbCallBack])
+H = model.fit(X, Y, epochs=10000, batch_size=50, verbose=1, validation_split=0.3, callbacks=[tbCallBack])
 
 #plt.plot(H.history['mean_squared_error'])
 #plt.show()
 
 # Predict
-X_= []
-for x_ in range(0, 70):
-    X_.append(x_)
+Y_ = model.predict(X)
 
-Y_ = model.predict(X_)
-
-plt.plot(X, Y, 'b')
-plt.plot(X, Y_, 'r')
+fig, ax = plt.subplots(figsize=(15, 5))
+ax.plot(X, Y, '')
+ax.plot(X, Y, 'ro')
+ax.plot(X, Y_, 'y')
+ax.plot(X, Y_, 'r+')
+ax.set_xlabel('Tag')
+ax.set_ylabel('Bestand')
+plt.title('Ist-Bestand (scaled)')
 plt.show()
-
-#print(X_)
-#print(Y_)
-
-#plt.title('Bestandsprognose')
-#plt.subplot(211)
-#plt.plot(x, y)
-#plt.xlabel('Tag')
-#plt.ylabel('Bestand')
-#plt.subplot(212)
-#plt.plot(X_, Y_)
-#plt.xlabel('Tag')
-#plt.ylabel('Prognose')
-#plt.show()
-
